@@ -9,6 +9,7 @@ import { TaskList } from "../../component/new/task-list/task-list";
 })
 export class Home implements AfterViewInit{
   @ViewChild('todoApp') todoAppRef!: ElementRef;
+  @ViewChild('todoAppIcon') todoAppIconRef!: ElementRef;
 
   ngAfterViewInit(){
     const element = this.todoAppRef.nativeElement;
@@ -34,6 +35,15 @@ export class Home implements AfterViewInit{
   minWindow(){
     const element = this.todoAppRef.nativeElement;
     element.style = `display: none;`
+    const iconElement = this.todoAppIconRef.nativeElement;
+    iconElement.style = `display: block;`
+  }
+
+  restoreWindow(){
+    const element = this.todoAppRef.nativeElement;
+    element.style = `display: block;`
+    const iconElement = this.todoAppIconRef.nativeElement;
+    iconElement.style = `display: none;`  
   }
 
   closeWindow(){

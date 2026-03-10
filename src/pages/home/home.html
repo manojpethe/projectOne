@@ -12,7 +12,7 @@
     #todoApp 
     [draggable]="true"
     >
-        <div class="w-full" draggable="false">
+        <div class="w-full">
             <div (click)="closeWindow()" class="float-right m-2 text-center rounded h-6 w-6 bg-white cursor-pointer">
                 X
             </div>
@@ -31,5 +31,5 @@
 </div>
 
 
-
+<div #todoAppIcon (click)="restoreWindow()" id="todoAppIcon" class="hidden text-center bg-gray-100 rounded border shadow-xl/30 m-4 p-4 absolute cursor-pointer text-5xl left-7 top-148">🍺</div>
 </div>
