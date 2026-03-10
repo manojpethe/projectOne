@@ -1,0 +1,12 @@
+<div class="flex">
+<div class="h-[90%] w-[10%] ">
+@for(item of todoService.TodoItemList(); track item.title){
+<div class="h-10 border-gray border rounded-2xl p-2 m-2"><a [routerLink]="['/dynamic',item.id]"> {{item.title}}</a></div>
+}
+</div>
+<div>
+    {{id()}}
+    <br>
+    {{title()}}
+</div>
+</div>

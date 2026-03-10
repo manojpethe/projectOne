@@ -1,8 +1,5 @@
 <div class="w-[98%] h-[95%]" (dragover)="dragoverProc($event)" (dragenter)="dragoverProc($event)" (drop)="dragoverProc($event)">
-<div class="z-100 w-[40%] h-[50%] border-cyan-600 border-2 rounded-2xl m-5 scroll-auto absolute"
-        id="todoApp"
-        #todoApp 
-        >
+<div class="z-100 w-[40%] h-[50%] border-cyan-600 border-2 rounded-2xl m-5 scroll-auto absolute" id="todoApp" #todoApp >
     <div 
     (dragstart)="dragStartMethod($event)" 
     (drag)="dragInProgress($event)" 
@@ -31,5 +28,5 @@
 </div>
 
 
-<div #todoAppIcon (click)="restoreWindow()" id="todoAppIcon" class="hidden text-center bg-gray-100 rounded border shadow-xl/30 m-4 p-4 absolute cursor-pointer text-5xl left-7 top-148">🍺</div>
+<div #todoAppIcon (click)="restoreWindow()" id="todoAppIcon" class="hidden text-center bg-gray-100 rounded border shadow-xl/30 m-4 p-4 absolute cursor-pointer left-7 top-148"><span class="text-5xl">🍔</span><br><span class="text-sm align-top">Todo App</span></div>
 </div>
