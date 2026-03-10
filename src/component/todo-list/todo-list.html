@@ -1,0 +1,21 @@
+
+<br>
+<div class="w-150">
+<div class="flex justify-around p-2">
+
+
+<input type="text" class="border-b-2 " value={{taskTitle}} #titleInput placeholder="task title" />
+<button class="primary" type="button" (click)="addItem(titleInput.value);titleInput.value = ''"> Add Task</button>
+</div>
+<!-- @for(item of signalTodoItemList(); track item.title ){
+    <div class="flex justify-around p-2"><div class="border-b w-50"><label for={{item.title}}>{{item.title}}</label></div>
+    <div><input  type="checkbox" (click)="updateItem(item.id)" id={{item.title}} name={{item.title}} value={{item.done}}></div>
+    <div>{{item.cdate}}</div>
+    </div>
+} -->
+<todo-table 
+    [todoItemList]="signalTodoItemList()"
+    (updateItem)="updateItem($event)" 
+/>
+
+</div>

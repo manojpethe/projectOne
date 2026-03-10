@@ -1,0 +1,19 @@
+<div class="text-4xl">{{signalCounter()}}</div>
+<div>
+    <button class="border-radius rounded border-1 bg-green-500 p-4 rounded-lg shadow-lg" (click)="handlePlus()">PLUS</button>
+    <button class="border-radius rounded border-1 bg-red-500 p-4 rounded-lg shadow-lg" (click)="handleMinus()">MINUS</button>
+
+@switch(signalCounter()){
+
+    @case (1) {
+        <div>👍</div>
+    }
+    @case (2) {
+        <div>😒</div>
+    }
+    @default {
+        <div>🤷‍♂️</div>
+    }
+}
+
+</div>

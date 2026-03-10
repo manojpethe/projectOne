@@ -1,0 +1,9 @@
+<br>
+value: {{name()}}
+<br>
+<input [value]="name()" (input)="name.set($event.target.value)" class="border-b-2" type="text" placeholder="text input" />
+<br>
+<br>
+<button class="primary" (click)="name.set('')" >ResetValue</button>
+<br>
+<br>

@@ -1,0 +1,35 @@
+<div class="w-[98%] h-[95%]" (dragover)="dragoverProc($event)" (dragenter)="dragoverProc($event)" (drop)="dragoverProc($event)">
+<div class="z-100 w-[40%] h-[50%] border-cyan-600 border-2 rounded-2xl m-5 scroll-auto absolute"
+        id="todoApp"
+        #todoApp 
+        >
+    <div 
+    (dragstart)="dragStartMethod($event)" 
+    (drag)="dragInProgress($event)" 
+    (dragend)="dragInProgress($event)" 
+    class="z-0 w-full h-10 rounded-t-xl rounded-br-none rounded-bl-none bg-blue-100 mb-3 grabbable" 
+    id="todoApp"
+    #todoApp 
+    [draggable]="true"
+    >
+        <div class="w-full" draggable="false">
+            <div (click)="closeWindow()" class="float-right m-2 text-center rounded h-6 w-6 bg-white cursor-pointer">
+                X
+            </div>
+            <div (click)="maxWindow()" class="float-right m-2 text-center rounded h-6 w-6 bg-white cursor-pointer">
+                [=]
+            </div>
+            <div (click)="minWindow()" class="float-right m-2 text-center rounded h-6 w-6 bg-white cursor-pointer">
+                _
+            </div>
+        <div class="">
+        <br>
+        <task-list />
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+</div>

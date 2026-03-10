@@ -1,0 +1,8 @@
+navrbar-btn {
+    margin-left: 2rem;
+}
+
+.active {
+    color: azure;
+    background-color: rgb(61, 64, 112);
+}

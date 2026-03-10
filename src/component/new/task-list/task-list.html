@@ -1,0 +1,12 @@
+
+<br>
+<div class="w-150">
+<div class="flex justify-around p-2">
+
+
+<input type="text" class="border-b-2 " value={{taskTitle}} #titleInput placeholder="task title" />
+<button class="primary" type="button" (click)="this.todoService.addItem(titleInput.value);titleInput.value = ''"> Add Task</button>
+</div>
+<task-table />
+
+</div>
