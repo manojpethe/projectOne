@@ -1,0 +1,31 @@
+<div class="flex w-full h-[90%] ">
+    <div class="text-center m-auto">
+        <div>
+            <form [formGroup]="loginForm" (ngSubmit)="handleSubmit()" method="post" >
+            <h1>Reactive Form</h1>
+            <input class="p-1 m-2 border rounded border-gray-700" type="text" placeholder="email" formControlName="email" />
+            <br>
+            @if(email?.hasError('required') && email?.touched){
+                <span class="text-red-500 text-xs">Enter an email</span>
+            }
+            @if(email?.errors?.['email'] && email?.touched){
+                <span class="text-red-500 text-xs">Enter a valid email</span>
+            }
+            <br>
+            <input class="p-1 m-2 border rounded border-gray-700 text-cyan-400" type="password" placeholder="password" formControlName="password"/>
+            <br>
+            @if(password?.touched && password?.hasError('required')){
+                <span  class="text-red-500 text-xs">This is required</span>
+            }
+            @if(password?.touched && password?.errors?.['minLength']){
+                <span  class="text-red-500 text-xs">Enter lengthy password</span>
+            }
+            <br><button [disabled]="loginForm.invalid" type="submit" class="primary">Submit</button>&nbsp;
+            <button type="reset" class="secondary" (click)="reset()">Clear</button>
+            </form>
+        </div>
+        <div>
+            {{this.loginForm.value| json}}
+        </div>
+    </div>
+</div>
